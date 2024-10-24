@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import AllNews from "./Components/AllNews";
 import Footer from "./Components/Footer";
-import TopHeadlines from "./components/TopHeadlines";
+import TopHeadlines from "./Components/TopHeadlines";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CountryNews from "./components/CountryNews";
