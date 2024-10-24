@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import AllNews from "./Components/AllNews";
-import Footer from "./Components/Footer";
+// import Footer from "./components/Footer";
 import TopHeadlines from "./Components/TopHeadlines";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
