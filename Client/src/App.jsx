@@ -6,7 +6,7 @@ import Footer from "./Components/Footer";
 import TopHeadlines from "./Components/TopHeadlines";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CountryNews from "./components/CountryNews";
+import CountryNews from "./Components/CountryNews";
 
 function App() {
   const [count, setCount] = useState(0)
