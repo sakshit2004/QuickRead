@@ -6,7 +6,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-  origin: '*', 
+  origin: '*', // Be cautious with this in production
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -40,7 +40,7 @@ app.get("/all-news", async (req, res) => {
   let page = parseInt(req.query.page) || 1;
   let q = req.query.q || 'world'; // Default search query if none provided
 
-  let url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(q)}&page=${page}&pageSize=${pageSize}&apiKey=${API_KEY}`;
+  let url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(q)}&page=${page}&pageSize=${pageSize}&apiKey=${process.env.API_KEY}`;
   const result = await makeApiRequest(url);
   res.status(result.status).json(result);
 });
@@ -50,13 +50,22 @@ app.get("/top-headlines", async (req, res) => {
   let page = parseInt(req.query.page) || 1;
   let category = req.query.category || "general";
 
-  let url = `https://newsapi.org/v2/top-headlines?category=${category}&language=en&page=${page}&pageSize=${pageSize}&apiKey=${API_KEY}`;
+  let url = `https://newsapi.org/v2/top-headlines?category=${category}&language=en&page=${page}&pageSize=${pageSize}&apiKey=${process.env.API_KEY}`;
   const result = await makeApiRequest(url);
   res.status(result.status).json(result);
 });
 
+app.get("/country/:iso", async (req, res) => {
+  let pageSize = parseInt(req.query.pageSize) || 80;
+  let page = parseInt(req.query.page) || 1;
+  const country = req.params.iso;
 
-const PORT = process.env.PORT || 3000;
+  let url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.API_KEY}&page=${page}&pageSize=${pageSize}`;
+  const result = await makeApiRequest(url);
+  res.status(result.status).json(result);
+});
+
+const PORT = process.env.PORT || 3090;
 app.listen(PORT, function () {
   console.log(`Server is running at port ${PORT}`);
 });
