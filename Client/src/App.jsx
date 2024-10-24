@@ -5,7 +5,7 @@ import AllNews from "./Components/AllNews";
 // import Footer from "./components/Footer";
 import TopHeadlines from "./Components/TopHeadlines";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import CountryNews from "./Components/CountryNews";
 
 function App() {
