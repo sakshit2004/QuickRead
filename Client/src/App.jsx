@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import AllNews from "./Components/AllNews";
-// import Footer from "./components/Footer";
-import TopHeadlines from "./Components/TopHeadlines";
+import Footer from "./Components/Footer";
+import TopHeadlines from "./components/TopHeadlines";
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
-import CountryNews from "./Components/CountryNews";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CountryNews from "./components/CountryNews";
 
 function App() {
   const [count, setCount] = useState(0)
