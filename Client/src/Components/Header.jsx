@@ -53,27 +53,7 @@ function Header() {
               })}
             </ul>
           </li>
-          <li className="dropdown-li"><Link className="no-underline font-semibold flex items-center gap-2" onClick={() => { setShowCountryDropdown(!showCountryDropdown); setShowCategoryDropdown(false) }}>Country <FontAwesomeIcon className={showCountryDropdown ? "down-arrow-icon down-arrow-icon-active" : "down-arrow-icon"} icon={faCircleArrowDown} /></Link>
-            <ul className={showCountryDropdown ? "dropdown p-2 show-dropdown" : "dropdown p-2"}>
-              {countries.map((element, index) => {
-                return (
-                  <li key={index} onClick={() => { setShowCountryDropdown(!showCountryDropdown) }}>
-                    <Link to={"/country/" + element?.iso_2_alpha} className="flex gap-3" type="btn"
-                      onClick={() => {
-                        setActive(!active)
-                      }}>
-                      <img
-                        src={element?.png}
-                        srcset={`https://flagcdn.com/32x24/${element?.iso_2_alpha}.png 2x`}
-                   
-                        alt={element?.countryName} />
-                      <span>{element?.countryName}</span>
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
-          </li>
+
           <li><Link className="no-underline font-semibold" to="#" onClick={() => { toggleTheme() }}>
       
           <input type="checkbox" class="checkbox" id="checkbox"/>
