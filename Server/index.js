@@ -64,7 +64,7 @@ app.get("/country/:iso", async (req, res) => {
   res.status(result.status).json(result);
 });
 
-const PORT = process.env.PORT || 3990;
+const PORT = process.env.PORT || 3910;
 app.listen(PORT, function () {
   console.log(`Server is running at port ${PORT}`);
 });
