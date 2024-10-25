@@ -32,7 +32,12 @@ function AllNews() {
       .then(myJson => {
         if (myJson.success) {
           setTotalResults(myJson.data.totalResults);
-          setData(myJson.data.articles);
+          // Filter out articles that contain "[Removed]"
+          const filteredArticles = myJson.data.articles.filter(article => 
+            !article.title.includes("[Removed]") && 
+            !article.description.includes("[Removed]")
+          );
+          setData(filteredArticles);
         } else {
           setError(myJson.message || 'An error occurred');
         }
