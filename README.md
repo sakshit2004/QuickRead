@@ -10,7 +10,7 @@
 </div>
 
 <p align="center">
-  <img width="1469" alt="QuickRead" src="https://raw.githubusercontent.com/sakshit2004/QuickRead/4270eebe1d6b008d7ac2e35f098d21989014b62d/client/src/assets/QuickRead.news%20IMG.png">
+  <img width="1469" alt="QuickRead" src="https://raw.githubusercontent.com/sakshit2004/QuickRead/refs/heads/main/client/src/assets/QuickRead.news%20IMG.png?token=GHSAT0AAAAAACJH7IP4MYONMVFF7WCR6RS4ZZAZBLA">
 </p>
 
 <p align="center">
