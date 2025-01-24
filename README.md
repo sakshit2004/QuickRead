@@ -10,7 +10,7 @@
 </div>
 
 <p align="center">
-  <img width="1469" alt="QuickRead" src="https://raw.githubusercontent.com/sakshit2004/QuickRead/4270eebe1d6b008d7ac2e35f098d21989014b62d/client/src/assets/QuickRead.news%20IMG.png">
+  <img width="1469" alt="QuickRead" src="https://raw.githubusercontent.com/sakshit2004/QuickRead/refs/heads/main/client/src/assets/QuickRead.news%20IMG.png">
 </p>
 
 <p align="center">
@@ -111,7 +111,7 @@ These instructions will help you set up the project on your local machine for de
    ```
 3. Navigate to the server directory and create a new file named `.env`:
    ```bash
-   cd QuickRead.news/server
+   cd QuickRead.news/Server
    touch .env
    ```
 4. Add your NewsAPI.org API key to the `.env` file:
@@ -125,7 +125,7 @@ These instructions will help you set up the project on your local machine for de
    ```
 6. In a new terminal, navigate to the client directory, install dependencies, and start the client:
    ```bash
-   cd ../client
+   cd ../Client
    npm install
    npm run dev
    ```
