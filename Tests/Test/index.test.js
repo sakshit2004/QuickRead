@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../Server/index"); // Adjust path to your index.js
+const app = require("../../Server/index"); // Adjust path to your index.js
 
 describe("News API Server", () => {
   const BASE_URL = "/";
